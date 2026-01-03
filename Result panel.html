@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>XAR-DNN – Experimental Results Dashboard</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 30px;
+    }
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+    h1 {
+        text-align: center;
+        color: #1a2a3a;
+    }
+    .panel {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+    }
+    th {
+        background: #eef2f7;
+        font-weight: 600;
+    }
+    .highlight {
+        color: #0b6efd;
+        font-weight: bold;
+    }
+    .badge {
+        display: inline-block;
+        padding: 6px 12px;
+        background: #0b6efd;
+        color: white;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>XAR-DNN Experimental Results Dashboard</h1>
+
+<div class="panel">
+<h2>1. Classification & Adversarial Robustness</h2>
+<table>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+<tr><td>Clean Accuracy</td><td class="highlight">95.74 %</td></tr>
+<tr><td>FGSM Accuracy</td><td>95.09 %</td></tr>
+<tr><td>PGD-5 Accuracy</td><td>94.80 %</td></tr>
+<tr><td>ROC-AUC</td><td>0.97</td></tr>
+</table>
+</div>
+
+<div class="panel">
+<h2>2. Certified ℓ₂ Robustness (Randomized Smoothing)</h2>
+<table>
+<tr>
+<th>σ</th>
+<th>ℓ₂ Radius</th>
+<th>Certified Accuracy</th>
+</tr>
+<tr>
+<td>0.25</td>
+<td>0.42</td>
+<td class="highlight">78.4 %</td>
+</tr>
+</table>
+<p>
+<span class="badge">Provable Black-Box Robustness</span>
+</p>
+</div>
+
+<div class="panel">
+<h2>3. Semantic Adversarial Robustness</h2>
+<table>
+<tr>
+<th>Attack Type</th>
+<th>ΔFSA</th>
+<th>Observation</th>
+</tr>
+<tr>
+<td>ℓ∞ FGSM</td>
+<td>0.46</td>
+<td>Fast degradation</td>
+</tr>
+<tr>
+<td>Packet-Drop (Semantic)</td>
+<td class="highlight">0.11</td>
+<td>4.2× more stable</td>
+</tr>
+</table>
+</div>
+
+<div class="panel">
+<h2>4. Energy Efficiency (IoT Deployment)</h2>
+<table>
+<tr>
+<th>Platform</th>
+<th>Energy / Inference</th>
+<th>Comparison</th>
+</tr>
+<tr>
+<td>Raspberry Pi Zero 2 W</td>
+<td class="highlight">0.73 mJ</td>
+<td>1.9× lower than TinyML CNN</td>
+</tr>
+</table>
+</div>
+
+</div>
+</body>
+</html>
