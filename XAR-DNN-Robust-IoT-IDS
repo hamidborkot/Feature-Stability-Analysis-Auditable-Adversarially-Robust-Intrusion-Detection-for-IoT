@@ -1,0 +1,28 @@
+XAR-DNN-Robust-IoT-IDS/
+│
+├── README.md
+├── requirements.txt
+│
+├── data/
+│   └── README.md              # Dataset links + preprocessing notes
+│
+├── models/
+│   ├── xar_dnn_tf/             # TensorFlow training
+│   └── xar_dnn_torch/          # Torch model for certification
+│
+├── experiments/
+│   ├── 01_train_xar_dnn.py
+│   ├── 02_fgsm_pgd_eval.py
+│   ├── 03_randomized_smoothing_certification.py
+│   ├── 04_semantic_attacks.py
+│   ├── 05_fsa_analysis.py
+│   ├── 06_energy_measurement.py
+│
+├── results/
+│   ├── clean_fgsm_pgd.csv
+│   ├── certified_results.csv
+│   ├── semantic_fsa.csv
+│   └── energy_results.csv
+│
+└── figures/
+    └── plots_for_paper/
