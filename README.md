@@ -36,3 +36,62 @@ Energy per inference measured on Raspberry Pi Zero 2 W: **0.73 mJ**.
 pip install -r requirements.txt
 python src/train_xar_dnn.py
 python src/certify_smoothing.py
+
+---
+
+## 🧪 Experiment–Paper Mapping
+
+| Paper Section | Script |
+|--------------|--------|
+| IV-B Model Training | `01_train_xar_dnn.py` |
+| IV-C FGSM / PGD Robustness | `02_fgsm_pgd_eval.py` |
+| IV-D Certified ℓ₂ Robustness | `03_randomized_smoothing_certification.py` |
+| IV-E Semantic Attacks | `04_semantic_attacks.py` |
+| IV-F Feature Stability (FSA) | `05_fsa_analysis.py` |
+| IV-G Energy Efficiency | `06_energy_measurement.py` |
+
+---
+
+## 🔐 Key Results Summary
+
+| Metric | Value |
+|------|------|
+| Clean Accuracy | **95.74 %** |
+| FGSM Accuracy | **95.09 %** |
+| PGD-5 Accuracy | **94.80 %** |
+| Certified Acc @ ℓ₂ = 0.42 | **78.4 %** |
+| ROC-AUC | **0.97** |
+| Energy / Inference | **0.73 mJ** |
+
+---
+
+## 📊 Interactive Results Panel
+
+See **`docs/results.html`** for a unified, visual summary of all results.
+
+---
+
+## 📦 Datasets
+
+Due to size restrictions, datasets are not included:
+- Edge-IIoTset
+- NSL-KDD
+- CIC-IDS-2018
+
+Official download links are provided in `data/README.md`.
+
+---
+
+## 🧾 Reproducibility
+
+All experiments were conducted with:
+- Fixed random seeds
+- Explicit hyperparameters
+- Hardware and software versions disclosed
+
+---
+
+## 📜 License
+
+This project is released for **academic research purposes**.
+
