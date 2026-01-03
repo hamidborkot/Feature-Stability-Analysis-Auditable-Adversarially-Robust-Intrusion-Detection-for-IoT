@@ -11,7 +11,7 @@ All experiments can be reproduced using the provided scripts.
 ## Datasets
 Due to license restrictions, datasets are not redistributed.
 Please download:
-- Edge-IIoTset
+- Edge-IIoTset -https://www.kaggle.com/code/mdhamidborkottulla/notebook304f1cf782/edit
 - NSL-KDD
 - CIC-IDS-2018
 
